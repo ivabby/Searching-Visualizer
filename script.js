@@ -75,6 +75,12 @@ function searchingStart(){
 
 
     if(valueToBeSearched != ""){
+
+        for(let i=0;i<sizeOfArray;i++){
+            let cell = table.rows.item(0).cells.item(i);
+            cell.style["background-color"] = "green";
+        }
+
         if(dropdown.value === "LinearSearch"){
             LinearSearch();
         }
