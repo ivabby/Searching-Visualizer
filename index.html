@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <title>Searching Visualization</title>
+    </head>
+    <body>
+        <section class="navbar">
+            <button id="generateArrayButton" class="generate-new-array" onclick="generateNewArray()">Generate New Array</button>
+
+            <p>Change Array Size</p>
+            <div class="slidecontainer">
+                <input type="range" min="4" max="20" value="4" class="slider" id="myRange">
+            </div>
+
+            <p>Searching Techniques</p>
+
+            <select id="dropdown">
+                <option value="" hidden selected disabled>Choose</option>
+                <option value="LinearSearch">Linear Searching</option>
+                <option value="BinarySearch">Binary Searching</option>
+            </select>
+
+            <div id="value-start" style="visibility:hidden">
+                <input type="number" name="Number" id="valueToBeSearched" placeholder="value" required>
+                <button id="start" onclick="searchingStart();">Start</button>
+            </div>
+
+        </section>
+
+        <section class="main">
+                <table id="myTable">
+                </table>
+        </section>
+        <h1 id="para" style="display: block; text-align:center;"></h1>
+
+        <script src="script.js" charset="utf-8"></script>
+    </body>
+</html>
